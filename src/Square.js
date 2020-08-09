@@ -6,14 +6,14 @@ const PhotoLength = 600;
 
 
 export const Square = (props) => {
-    const SIZE = props.size;
-    const PIECE_LENGTH =  PhotoLength / SIZE ;
-    const NUM_PIECES = SIZE * SIZE;
+    // const SIZE = props.size;
+    const PIECE_LENGTH =  PhotoLength / props.size ;
+    const NUM_PIECES = props.size * props.size;
 
-    const top = Math.floor(props.pos / SIZE) * PIECE_LENGTH;
-    const left = (props.pos % SIZE) * PIECE_LENGTH;
-    const photoTop = Math.floor(props.index / SIZE) * PIECE_LENGTH;
-    const photoLeft = (props.index % SIZE) * PIECE_LENGTH;
+    const top = Math.floor(props.pos / props.size) * PIECE_LENGTH;
+    const left = (props.pos % props.size) * PIECE_LENGTH;
+    const photoTop = Math.floor(props.index / props.size) * PIECE_LENGTH;
+    const photoLeft = (props.index % props.size) * PIECE_LENGTH;
   
     if (props.index !== NUM_PIECES -1) {
         return (
