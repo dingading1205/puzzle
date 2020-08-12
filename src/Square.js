@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from "./Passbild.jpg"
+import Photo from "./photo.jpg"
 
 // const SIZE = 3;
 const PhotoLength = 600;
